@@ -347,13 +347,43 @@ body:not(.light) .dark-theme { display:block; }
 /* ===== EXPERIENCES ===== */
 .experiences-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px; }
 .experience-card {
-  background:var(--card-bg);border:1px solid var(--border);border-radius:4px;padding:28px;
-  transition:border-color .3s,box-shadow .3s,transform .25s;position:relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 28px;
+  transition: border-color .3s, box-shadow .3s, transform .25s;
+  position: relative;
+  overflow: visible;
 }
 .experience-card:hover { border-color:var(--purple);box-shadow:0 0 12px rgba(191,0,255,0.15);transform:translateY(-3px); }
-.certificate-badge { display:block;margin-bottom:16px;border-radius:4px;overflow:hidden;border:1px solid var(--border);max-width:100%;transition:opacity .2s; }
-.certificate-badge:hover { opacity:.85; }
-.certificate-badge img { max-height:120px;width:100%;object-fit:cover; }
+.certificate-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  color: var(--purple);
+  border: 1px solid var(--border2);
+  border-radius: 3px;
+  text-decoration: none;
+  background: var(--bg2);
+  transition: background .2s, border-color .2s, color .2s;
+  white-space: nowrap;
+  z-index: 20;
+}
+.certificate-badge::before {
+  content: '$ view_cert';
+}
+.certificate-badge img {
+  display: none;
+}
+.certificate-badge:hover {
+  background: var(--purple);
+  color: var(--bg);
+  border-color: var(--purple);
+}
 .exp-logo { width:48px;height:48px;object-fit:contain;margin-bottom:12px;border-radius:6px;background:rgba(255,255,255,.08);padding:6px; }
 .experience-card h4 { font-size:.95rem;font-weight:600;color:var(--cyan);margin-bottom:6px; }
 .exp-role { font-size:.82rem;color:var(--purple);margin-bottom:4px; }
@@ -576,6 +606,12 @@ footer {
     margin-bottom: 12px;
     align-self: flex-start;
   }
+  .certificate-badge {
+  position: static;
+  display: inline-block;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
 
   .achievements-row { flex-direction:column; align-items:stretch; }
   .achievements-text { flex:1 1 100%; }
