@@ -540,24 +540,47 @@ footer {
   nav ul { display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--header-bg);border-bottom:1px solid var(--border);padding:16px 28px;gap:12px; }
   nav ul.active { display:flex; }
   .content-section { padding:60px 5%; }
-  .cert-timeline-cards { padding-right:50px; }
-  .cert-timeline-cards::before { right:18px; }
-  .cert-timeline-cards .timeline-marker { right:-38px;width:22px;height:22px;top:20px; }
-  .timeline-marker { left:-38px;width:22px;height:22px;top:20px; }  .education-timeline-cards { padding-left:50px; }
-  .education-timeline-cards::before { left:18px; }
-  .timeline-card { padding-top:20px;padding-bottom:20px; }
+
+  /* Education timeline — hide circle, use top border instead */
+  .education-timeline-cards {
+    padding-left: 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .education-timeline-cards::before { display:none; }
+  .timeline-marker { display:none; }
+  .timeline-card {
+    padding: 20px 16px;
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* Cert timeline — same fix */
+  .cert-timeline-cards {
+    padding-right: 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .cert-timeline-cards::before { display:none; }
+  .cert-timeline-cards .timeline-marker { display:none; }
+  .cert-card.timeline-card {
+    border-left: 3px solid var(--primary);
+    border-radius: 0 4px 4px 0;
+    padding: 20px 16px;
+  }
+
+  /* cert view btn — move below title on mobile so it doesn't overflow */
+  .cert-view-btn {
+    position: static;
+    display: inline-block;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+
   .achievements-row { flex-direction:column; align-items:stretch; }
   .achievements-text { flex:1 1 100%; }
-  .achievements-image-container { 
-    flex:1 1 100%;
-    max-width:100%;
-    width:100%;
-    margin-left:0;
-  }
-  .image-slide { 
-    width:100%;
-    aspect-ratio:3/4;
-  }
+  .achievements-image-container { flex:1 1 100%; max-width:100%; width:100%; margin-left:0; }
+  .image-slide { width:100%; aspect-ratio:3/4; }
 }
 @media (max-width:480px) {
   .hero-name { font-size:1.7rem; }
