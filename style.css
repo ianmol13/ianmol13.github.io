@@ -642,7 +642,10 @@ footer {
     margin-right: 0;
   }
   .education-timeline-cards::before { display:none; }
-  .timeline-marker { display:none; }
+  .timeline-marker { display:none !important; }
+  .cert-timeline-cards .timeline-marker { display:none !important; }
+  .education-timeline-cards::before { display:none !important; }
+  .cert-timeline-cards::before { display:none !important; }  
   .timeline-card {
     padding: 20px 16px;
     border-left: 3px solid var(--cyan);
@@ -655,8 +658,6 @@ footer {
     margin-left: 0;
     margin-right: 0;
   }
-  .cert-timeline-cards::before { display:none; }
-  .cert-timeline-cards .timeline-marker { display:none; }
   .cert-card.timeline-card {
     border-left: 3px solid var(--primary);
     border-radius: 0 4px 4px 0;
