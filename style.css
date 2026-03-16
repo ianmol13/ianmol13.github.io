@@ -681,4 +681,49 @@ footer {
   .section-header { font-size:1.2rem; }
   .card-grid { grid-template-columns:1fr; }
   .projects-grid { grid-template-columns:1fr; }
+
+  /* education */
+  .education-timeline-cards {
+    padding-left: 12px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .education-timeline-cards::before { display:none; }
+  .timeline-marker { display:none; }
+  .timeline-card {
+    padding: 16px 12px;
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* certs */
+  .cert-timeline-cards {
+    padding-right: 12px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .cert-timeline-cards::before { display:none; }
+  .cert-timeline-cards .timeline-marker { display:none; }
+  .cert-card.timeline-card {
+    border-left: 3px solid var(--primary);
+    border-radius: 0 4px 4px 0;
+    padding: 16px 12px;
+  }
+
+  /* cert view btn */
+  .cert-view-btn {
+    position: static;
+    display: inline-block;
+    margin-bottom: 12px;
+    align-self: flex-start;
+    font-size: .68rem;
+  }
+
+  /* experience cert badge */
+  .certificate-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: .68rem;
+  }
 }
