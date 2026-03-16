@@ -345,7 +345,11 @@ body:not(.light) .dark-theme { display:block; }
 .btn-prompt { color:var(--green);margin-right:2px; }
 
 /* ===== EXPERIENCES ===== */
-.experiences-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px; }
+.experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
 .experience-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -355,7 +359,11 @@ body:not(.light) .dark-theme { display:block; }
   position: relative;
   overflow: visible;
 }
-.experience-card:hover { border-color:var(--purple);box-shadow:0 0 12px rgba(191,0,255,0.15);transform:translateY(-3px); }
+.experience-card:hover {
+  border-color: var(--purple);
+  box-shadow: 0 0 12px rgba(191,0,255,0.15);
+  transform: translateY(-3px);
+}
 .certificate-badge {
   position: absolute;
   top: 14px;
@@ -384,14 +392,70 @@ body:not(.light) .dark-theme { display:block; }
   color: var(--bg);
   border-color: var(--purple);
 }
-.exp-logo { width:48px;height:48px;object-fit:contain;margin-bottom:12px;border-radius:6px;background:rgba(255,255,255,.08);padding:6px; }
-.experience-card h4 { font-size:.95rem;font-weight:600;color:var(--cyan);margin-bottom:6px; }
-.exp-role { font-size:.82rem;color:var(--purple);margin-bottom:4px; }
-.exp-date { font-size:.78rem;color:var(--warn);margin-bottom:12px; }
-.exp-desc { font-size:.82rem;color:var(--text);line-height:1.7;margin-bottom:8px; }
-.experience-card .tags { display:flex;gap:8px;list-style:none;padding:0;margin:12px 0 0; }
-.experience-card .tags li { padding:3px 10px;border-radius:2px;font-size:.72rem;background:var(--bg2);color:var(--text-dim);border:1px solid var(--border); }
+.exp-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  background: rgba(255,255,255,.08);
+  padding: 6px;
+}
+.experience-card h4 {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--cyan);
+  margin-bottom: 6px;
+}
+.exp-role {
+  font-size: .82rem;
+  color: var(--purple);
+  margin-bottom: 4px;
+}
+.exp-date {
+  font-size: .78rem;
+  color: var(--warn);
+  margin-bottom: 12px;
+}
+.exp-desc {
+  font-size: .82rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.exp-desc strong {
+  color: var(--primary);
+}
+.experience-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+.experience-card .tags li {
+  padding: 3px 10px;
+  border-radius: 2px;
+  font-size: .72rem;
+  background: var(--bg2);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+}
 
+/* mobile */
+@media (max-width:768px) {
+  .certificate-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+  .experiences-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* ===== TAGS (global) ===== */
 .tags { display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:12px 0 0; }
 .tags li {
@@ -606,12 +670,6 @@ footer {
     margin-bottom: 12px;
     align-self: flex-start;
   }
-  .certificate-badge {
-  position: static;
-  display: inline-block;
-  margin-bottom: 12px;
-  align-self: flex-start;
-}
 
   .achievements-row { flex-direction:column; align-items:stretch; }
   .achievements-text { flex:1 1 100%; }
