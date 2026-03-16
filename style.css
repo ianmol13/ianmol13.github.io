@@ -433,11 +433,18 @@ body:not(.light) .dark-theme { display:block; }
   border-radius:50%;box-shadow:0 0 8px rgba(0,229,255,0.3);z-index:15;
 }
 .timeline-card {
-  position:relative;background:var(--card-bg);color:var(--text);
-  border:1px solid var(--border);border-radius:4px;
-  padding:24px 24px 24px 52px;
-  box-shadow:var(--glow-blue);
-  transition:transform .25s,box-shadow .3s,border-color .3s;z-index:10;display:flex;flex-direction:column;
+  position: relative;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px 24px 24px 52px;
+  box-shadow: var(--glow-blue);
+  transition: transform .25s, box-shadow .3s, border-color .3s;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
 }
 .timeline-card:hover { transform:translateY(-3px);box-shadow:var(--glow-cyan);border-color:var(--cyan); }
 .edu-logo { width:52px;height:52px;object-fit:contain;margin-bottom:14px;border-radius:6px;background:rgba(255,255,255,.08);padding:6px; }
