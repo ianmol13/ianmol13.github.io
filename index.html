@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anmol Kumar | Cybersecurity Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#about" class="skip-link">Skip to content</a>
+
+  <!-- Scanlines overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <!-- Cursor -->
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header aria-label="Site header">
+    <div class="logo" aria-label="Logo"><span class="prompt-sym">root@anmol</span><span class="logo-sep">:</span><span class="logo-path">~</span><span class="logo-hash">#</span></div>
+
+    <button id="theme-toggle" class="term-toggle" aria-label="Toggle theme">
+  <span class="term-toggle-off">[light]</span>
+  <span class="term-toggle-on">[dark]</span>
+</button>
+
+    <nav aria-label="Primary">
+      <ul id="nav-links" aria-live="polite">
+        <li><a href="#about" data-spy>About</a></li>
+        <li><a href="#skills" data-spy>Skills</a></li>
+        <li><a href="#projects" data-spy>Projects</a></li>
+        <li><a href="#experiences" data-spy>Experience</a></li>
+        <li><a href="#certifications" data-spy>Certs</a></li>
+        <li><a href="#education" data-spy>Education</a></li>
+        <li><a href="#contact" data-spy>Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-section">
+    <div class="hero-terminal">
+      <div class="hero-titlebar">
+        <span class="dot d-red"></span><span class="dot d-yellow"></span><span class="dot d-green"></span>
+        <span class="hero-title-text">anmol@portfolio: ~</span>
+        <span class="hero-time" id="hero-clock"></span>
+      </div>
+      <div class="hero-body">
+        <div class="hero-left">
+          <p class="hero-line"><span class="hero-prompt">anmol@portfolio:~$</span> <span class="hero-cmd">whoami</span></p>
+          <h3 class="hero-greeting">Hello, I'm</h3>
+          <h1 class="hero-name"><span>AnmolKumar.</span></h1>
+          <h2 class="hero-role">I am a <span class="intro"></span><span class="typing-cursor">|</span></h2>
+          <div class="hero-actions">
+            <a href="Java Developer.pdf" class="resume-btn" download="Anmol-Kumar-Resume.pdf" target="_blank" rel="noopener">⬇ Resume</a>
+            <a class="icon-link" href="https://github.com/ianmol13" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a class="icon-link" href="https://linkedin.com/in/ianmol13" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+          <div class="hero-output-block">
+            <p class="hero-prompt-line"><span class="hero-prompt">anmol@portfolio:~$</span> <span class="hero-cmd">cat status.txt</span></p>
+            <p class="hero-out"><span class="out-key">status</span>   : <span class="out-val-green">● ONLINE — Open to opportunities</span></p>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="photo-container">
+            <div class="photo-frame-corner tl"></div>
+            <div class="photo-frame-corner tr"></div>
+            <div class="photo-frame-corner bl"></div>
+            <div class="photo-frame-corner br"></div>
+            <img src="My Pic.jpg"
+              srcset="My Pic-600.jpg 600w, My Pic-900.jpg 900w"
+              sizes="(max-width: 900px) 220px, 300px"
+              alt="Anmol Kumar, Cybersecurity Engineer"
+              decoding="async" />
+            <div class="photo-scan"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="content-section">
+    <div class="section-header-terminal">
+      <span class="sec-prompt">anmol@portfolio:~$</span>
+      <span class="sec-cmd">cat about.md</span>
+    </div>
+    <h3 class="section-header">// About Me</h3>
+    <div class="about-container">
+      <div class="about-image" aria-hidden="false">
+        <img src="generated-image (3).png" alt="About (light)" class="theme-image light-theme">
+        <img src="generated-image (4).png" alt="About (dark)" class="theme-image dark-theme">
+      </div>
+      <div class="about-text">
+        <div class="about-body terminal-text-block">
+          <p>Hey there, I am Anmol Kumar, a Software Engineer who believes great code should be secure, scalable, and purposeful.</p>
+          <p>My journey began with a fascination for how systems work — from breaking them down as a cybersecurity enthusiast to building them back up as a developer. Today, I combine both worlds: designing backend systems that are not just efficient, but resilient against real-world threats.</p>
+          <p>I specialize in Java, Spring Boot, and REST API development, with a growing focus on cloud infrastructure (AWS) and secure software architecture. Whether it's crafting a clean microservice, deploying an API pipeline, or encrypting sensitive data — I love building software that performs seamlessly and protects intelligently.</p>
+          <p>Over time, I have developed projects like a Secure Password Vault (AES-128-GCM encryption) and an OSINT-based Subdomain Enumeration Tool. Each project has shaped my understanding of what makes software not just functional but trustworthy.</p>
+          <p>When I am not coding, I am usually exploring new technologies, analyzing system vulnerabilities, or refining design patterns that bring clarity and precision to complex architectures.</p>
+          <p><span class="highlight-key">Currently exploring:</span> system design, cloud scalability, and secure application engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="content-section">
+    <div class="section-header-terminal">
+      <span class="sec-prompt">anmol@portfolio:~$</span>
+      <span class="sec-cmd">ls -la skills/</span>
+    </div>
+    <h3 class="section-header">// Technical Skills</h3>
+    <div class="card-grid">
+
+      <div class="card">
+        <h4><span class="card-bracket">[</span>Languages<span class="card-bracket">]</span></h4>
+        <div class="logo-container">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><p>Java</p></div>
+          <div class="skill-item"><img src="SQL.png" alt="SQL"><p>SQL</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><p>JavaScript</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><p>HTML</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><p>CSS</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><p>Python</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4><span class="card-bracket">[</span>Frameworks &amp; Tools<span class="card-bracket">]</span></h4>
+        <div class="logo-container">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"><p>Spring Boot</p></div>
+          <div class="skill-item"><img src="hibernate-logo-png-transparent.png" alt="Hibernate"><p>Hibernate</p></div>
+          <div class="skill-item"><img src="Rest API.jpg" alt="REST API"><p>REST API</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><p>Git</p></div>
+          <div class="skill-item"><img src="Microservices.png" alt="Microservices"><p>Microservices</p></div>
+          <div class="skill-item"><img src="JUnit.png" alt="JUnit"><p>JUnit</p></div>
+          <div class="skill-item"><img src="Maven.png" alt="Maven"><p>Maven</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4><span class="card-bracket">[</span>Cybersecurity &amp; Networking<span class="card-bracket">]</span></h4>
+        <div class="logo-container">
+          <div class="skill-item"><img src="https://nmap.org/images/sitelogo-nmap.svg" alt="Nmap"><p>Nmap</p></div>
+          <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wireshark_icon.svg/150px-Wireshark_icon.svg.png" alt="Wireshark"><p>Wireshark</p></div>
+          <div class="skill-item"><img src="https://www.svgrepo.com/show/454430/burpsuite-security-software.svg" alt="Burp Suite"><p>Burp Suite</p></div>
+          <div class="skill-item"><img src="https://www.kali.org/images/kali-dragon-icon.svg" alt="Kali Linux"><p>Kali Linux</p></div>
+          <div class="skill-item"><img src="Metasploit.png" alt="Metasploit"><p>Metasploit</p></div>
+          <div class="skill-item"><img src="Cyber Security.png" alt="Cybersecurity"><p>Cybersecurity</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4><span class="card-bracket">[</span>Databases<span class="card-bracket">]</span></h4>
+        <div class="logo-container">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><p>MySQL</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"><p>MongoDB</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4><span class="card-bracket">[</span>Development Environments<span class="card-bracket">]</span></h4>
+        <div class="logo-container">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" alt="Eclipse"><p>Eclipse</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="IntelliJ IDEA"><p>IntelliJ</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"><p>VS Code</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4><span class="card-bracket">[</span>Cloud<span class="card-bracket">]</span></h4>
+        <div class="logo-container">
+          <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS"><p>AWS</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"><p>Azure</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4><span class="card-bracket">[</span>Coursework<span class="card-bracket">]</span></h4>
+        <div class="logo-container">
+          <div class="skill-item"><img src="DBMS.png" alt="DBMS"><p>DBMS</p></div>
+          <div class="skill-item"><img src="object-oriented-programming.svg" alt="OOP"><p>OOP</p></div>
+          <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/814/814513.png" alt="Computer Networks"><p>Networks</p></div>
+          <div class="skill-item"><img src="OS.png" alt="Operating Systems"><p>OS</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4><span class="card-bracket">[</span>OS &amp; Platforms<span class="card-bracket">]</span></h4>
+        <div class="logo-container">
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"><p>Linux</p></div>
+          <div class="skill-item"><img src="Ubantu.png" alt="Ubuntu"><p>Ubuntu</p></div>
+          <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows"><p>Windows</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="content-section">
+    <div class="section-header-terminal">
+      <span class="sec-prompt">anmol@portfolio:~$</span>
+      <span class="sec-cmd">ls -la projects/</span>
+    </div>
+    <h3 class="section-header">// Projects</h3>
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-card-header">
+          <span class="project-num">01</span>
+          <h4>Secure Password Vault (Java)</h4>
+        </div>
+        <p class="project-summary">A fully encrypted Java password manager built with AES and PBKDF2 for maximum security.</p>
+        <p class="metrics">I have always been fascinated by how encryption protects our most sensitive data, so I built a secure password vault completely from scratch using Java's standard libraries. It uses <strong>AES-128-GCM</strong> encryption and PBKDF2 for key derivation, ensuring strong data security without external dependencies.</p>
+        <div class="threat">I also created both CLI and GUI interfaces, implemented rate limiting and memory safety, and added an automatic backup system to make it production-grade.</div>
+        <div class="threat">This project taught me how cryptography and software engineering blend together to create truly secure applications.</div>
+        <ul class="tags"><li>Java</li><li>Cryptography</li><li>AES</li><li>PBKDF2</li><li>GUI</li></ul>
+        <a href="https://github.com/ianmol13/Subdomain_enumeration_tool" class="btn-link" target="_blank" rel="noopener">
+          <span class="btn-prompt">$</span> view_repo
+        </a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card-header">
+          <span class="project-num">02</span>
+          <h4>Subdomain Enumeration Tool</h4>
+        </div>
+        <p class="project-summary">A high-speed Python tool that uncovers hidden subdomains using OSINT APIs and multithreading.</p>
+        <p class="metrics">This project began as my curiosity about how hackers uncover hidden parts of a website. I developed a Python-based Subdomain Enumeration Tool that integrates crt.sh and Sublist3r APIs to scan over 500 subdomains per hour.</p>
+        <p class="metrics">To make it efficient, I implemented <strong>multi-threading</strong>, boosting scan speed by 40%, and added an <strong>export-to-CSV</strong> feature for better usability.</p>
+        <div class="threat">Through this project, I deepened my understanding of OSINT, API integration, and automation in reconnaissance workflows.</div>
+        <ul class="tags"><li>Python</li><li>OSINT</li><li>API Integration</li><li>Brute-Force</li></ul>
+        <a href="https://github.com/ianmol13/Subdomain_enumeration_tool" class="btn-link" target="_blank" rel="noopener">
+          <span class="btn-prompt">$</span> view_repo
+        </a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card-header">
+          <span class="project-num">03</span>
+          <h4>Personal Portfolio Website</h4>
+        </div>
+        <p class="project-summary">A modern, responsive portfolio built with clean HTML, CSS, and JavaScript.</p>
+        <p class="metrics">This project was created to build a strong online presence and demonstrate my full-stack development and design skills. I focused on clean typography, smooth navigation, and mobile-first responsiveness.</p>
+        <p class="metrics">The site features dynamic sections including projects, skills, education, and contact — all styled with modern CSS (Flexbox, Grid) and subtle animations for enhanced user experience.</p>
+        <div class="threat"><strong>Impact:</strong> Serves as a live representation of my technical and design capabilities, helping recruiters and peers quickly understand my expertise and passion for development.</div>
+        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li><li>UI/UX</li></ul>
+        <a href="https://ianmol13.github.io" class="btn-link" target="_blank" rel="noopener"><span class="btn-prompt">$</span> view_live</a>
+        <a href="https://github.com/ianmol13/ianmol13.github.io" class="btn-link" target="_blank" rel="noopener"><span class="btn-prompt">$</span> view_repo</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section id="experiences" class="content-section">
+    <div class="section-header-terminal">
+      <span class="sec-prompt">anmol@portfolio:~$</span>
+      <span class="sec-cmd">cat experience.log</span>
+    </div>
+    <h3 class="section-header">// Experiences</h3>
+    <div class="experiences-grid">
+
+      <article class="experience-card">
+        <a href="https://drive.google.com/file/d/1Qv30jstB94gYhRRsfUYzXm5gLw5ZSuXt/view"
+          target="_blank" rel="noopener" class="certificate-badge" aria-label="View certificate">
+          <img src="Cyber Security Job Simulation.png" alt="View certificate" loading="lazy">
+        </a>
+        <img src="MasterCard.webp" alt="Mastercard Logo" class="exp-logo" loading="lazy">
+        <h4>Cybersecurity Job Simulation</h4>
+        <p class="exp-role">Mastercard</p>
+        <p class="exp-date">Aug 2024 – Aug 2024</p>
+        <p class="exp-desc">During my cybersecurity simulation with Mastercard, I worked on real-world threat analysis scenarios, identifying and reporting more than 15 phishing attacks through log inspection and anomaly detection.</p>
+        <p class="exp-desc">I also collaborated with simulated departments to design targeted awareness modules that helped reduce incident frequency by 25%.</p>
+        <p class="exp-desc">The experience gave me a deep appreciation for how security and user education go hand in hand in preventing breaches and how crucial PCI DSS compliance is for organizations handling financial data.</p>
+        <ul class="tags"><li>SIEM</li><li>IDS</li><li>Documentation</li></ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="content-section">
+    <div class="section-header-terminal">
+      <span class="sec-prompt">anmol@portfolio:~$</span>
+      <span class="sec-cmd">ls certs/ --sort=date</span>
+    </div>
+    <h3 class="section-header">// Certifications</h3>
+    <div class="cert-timeline-cards">
+
+      <article class="cert-card timeline-card">
+        <div class="timeline-marker"></div>
+        <img src="google.jpeg" alt="Google" class="cert-logo" loading="lazy" />
+        <h4>Introduction to Git and GitHub</h4>
+        <div class="cert-issuer">Google</div>
+        <div class="dates">2025</div>
+        <p class="description">Learned version control, collaboration, and code management using Git and GitHub workflows.</p>
+        <ul class="tags"><li>Git</li><li>Github</li><li>Version Control</li><li>Merging Branches</li></ul>
+      </article>
+
+      <article class="cert-card timeline-card">
+        <div class="timeline-marker"></div>
+        <img src="google.jpeg" alt="Google" class="cert-logo" loading="lazy" />
+        <h4>The Bits and Bytes of Computer Networking</h4>
+        <div class="cert-issuer">Google</div>
+        <div class="dates">2025</div>
+        <p class="description">Gained hands-on understanding of how data moves securely across networks using core protocols.</p>
+        <ul class="tags"><li>Computer Networks</li><li>Network Security</li><li>Troubleshooting</li></ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="content-section">
+    <div class="section-header-terminal">
+      <span class="sec-prompt">anmol@portfolio:~$</span>
+      <span class="sec-cmd">cat education.json</span>
+    </div>
+    <h3 class="section-header edu-heading">// Education</h3>
+    <div class="education-timeline-cards">
+
+      <article class="education-card timeline-card">
+        <div class="timeline-marker"></div>
+        <img src="HIT.png" alt="HIT Logo" class="edu-logo" loading="lazy" />
+        <h4>B.Tech in (CSE) Cyber Security</h4>
+        <div class="institute">Haldia Institute of Technology, Haldia, West Bengal</div>
+        <div class="dates">2022 – 2026</div>
+        <p class="description">Pursuing relevant coursework. Part of a Technical Society.</p>
+        <ul class="tags"><li>Society's Management Head</li><li>CTF Player</li><li>Cyber Security</li></ul>
+      </article>
+
+      <article class="education-card timeline-card">
+        <div class="timeline-marker"></div>
+        <img src="JL.jpeg" alt="School Logo" class="edu-logo" loading="lazy" />
+        <h4>Intermediate (12th)</h4>
+        <div class="institute">Jamunilal College, Hajipur, Vaishali</div>
+        <div class="dates">2019 – 2021</div>
+        <p class="description">Science stream, top grades, participated in competitions.</p>
+        <ul class="tags"></ul>
+      </article>
+
+      <article class="education-card timeline-card">
+        <div class="timeline-marker"></div>
+        <h4>Matriculation</h4>
+        <div class="institute">Janta High School, Musepur, Siwan</div>
+        <div class="dates">2018 – 2019</div>
+        <p class="description">Active in extracurricular activities.</p>
+        <ul class="tags"><li>Cricket Team Manager</li></ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- LEADERSHIP / ACHIEVEMENTS -->
+  <section id="achievements" class="achievements-section content-section">
+    <div class="section-header-terminal">
+      <span class="sec-prompt">anmol@portfolio:~$</span>
+      <span class="sec-cmd">cat leadership.md</span>
+    </div>
+    <h3 class="achievements-header section-header">// Leadership</h3>
+    <div class="achievements-row">
+      <div class="achievements-text terminal-text-block">
+        <p><strong>Event &amp; Management Head</strong> at <strong>IEEE HIT SB</strong>, where I successfully led 5+ technical events with 100+ participants, overseeing end-to-end event planning, coordination, and execution. Demonstrated strong leadership, team management, and organizational skills, ensuring seamless delivery and high participant engagement.</p>
+      </div>
+      <div class="achievements-image-container">
+        <div class="image-slide">
+          <img src="IEEE1.jpg" alt="IEEE Event 1" class="active" />
+          <img src="IEEE2.jpg" alt="IEEE Event 2" />
+          <img src="IEEE3.jpg" alt="IEEE Event 3" />
+          <img src="IEEE4.jpg" alt="IEEE Event 4" />
+          <button class="slide-btn left" onclick="slidePrev()">&#10094;</button>
+          <button class="slide-btn right" onclick="slideNext()">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="section-header-terminal">
+      <span class="sec-prompt">anmol@portfolio:~$</span>
+      <span class="sec-cmd">ping anmol --establish-connection</span>
+    </div>
+    <h3>// Contact Me</h3>
+    <div class="contact-buttons" style="padding-bottom: 50px;">
+      <a href="tel:9708159436" aria-label="Phone" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone Icon" />
+      </a>
+      <a href="mailto:anmolchaudhary8213@gmail.com" aria-label="Email" target="_blank">
+        <img src="https://img.icons8.com/ios-glyphs/50/ffffff/new-post.png" alt="Email Icon" />
+      </a>
+      <a href="https://github.com/ianmol13" aria-label="GitHub" target="_blank">
+        <img src="https://img.icons8.com/ios-glyphs/50/ffffff/github.png" alt="GitHub Icon" />
+      </a>
+      <a href="https://linkedin.com/in/ianmol13" aria-label="LinkedIn" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn Icon" />
+      </a>
+      <a href="https://instagram.com/_anmolchaudhary._" aria-label="Instagram" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram Icon" />
+      </a>
+      <a href="https://facebook.com/anmol.chaudhury.7" aria-label="Facebook" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook Icon" />
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="footer-prompt">anmol@portfolio:~$</span> echo "&copy; 2025 Anmol Kumar. All rights reserved."
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
