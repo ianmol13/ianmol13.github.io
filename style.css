@@ -393,6 +393,27 @@ body:not(.light) .dark-theme { display:block; }
 .dates { font-size:.8rem;color:var(--warn);margin-bottom:10px; }
 .description { font-size:.82rem;color:var(--text);line-height:1.6;margin-bottom:12px; }
 
+.cert-view-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem;
+  color: var(--cyan);
+  border: 1px solid var(--border2);
+  border-radius: 3px;
+  text-decoration: none;
+  background: var(--bg2);
+  transition: background .2s, border-color .2s, color .2s;
+  white-space: nowrap;
+}
+.cert-view-btn:hover {
+  background: var(--cyan);
+  color: var(--bg);
+  border-color: var(--cyan);
+}
+
 /* ===== EDUCATION ===== */
 #education { background:var(--bg2); }
 .edu-heading { font-size:1.6rem; }
