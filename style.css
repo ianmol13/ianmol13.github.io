@@ -407,6 +407,7 @@ body:not(.light) .dark-theme { display:block; }
   background: var(--bg2);
   transition: background .2s, border-color .2s, color .2s;
   white-space: nowrap;
+  z-index: 20;
 }
 .cert-view-btn:hover {
   background: var(--cyan);
