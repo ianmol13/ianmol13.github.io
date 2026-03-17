@@ -231,3 +231,108 @@ function showSlide(index) {
 function slideNext() { showSlide((currentSlide + 1) % slides.length); }
 function slidePrev() { showSlide((currentSlide - 1 + slides.length) % slides.length); }
 if (slides.length) showSlide(0);
+
+// ===== 3D SKILL CUBE =====
+(function(){
+  const cube = document.getElementById('cube');
+  const scene = document.getElementById('scene');
+  if(!cube || !scene) return;
+
+  let rx = -18, ry = 28, auto = true, drag = false, lx = 0, ly = 0;
+
+  const snaps = {
+    front:  {x:-18, y:0},
+    back:   {x:-18, y:180},
+    right:  {x:-18, y:-90},
+    left:   {x:-18, y:90},
+    top:    {x:-88, y:28},
+    bottom: {x:88,  y:28}
+  };
+
+  function apply(){ cube.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`; }
+
+  (function loop(){
+    if(auto && !drag){ ry += 0.28; apply(); }
+    requestAnimationFrame(loop);
+  })();
+
+  window.toggleCubeAuto = function(btn){
+    auto = !auto;
+    btn.classList.toggle('auto-on', auto);
+    btn.textContent = auto ? '⟳ rotate' : '⟳ paused';
+  };
+
+  window.cubeSnap = function(face){
+    auto = false;
+    const btn = document.getElementById('cube-btn-auto');
+    btn.classList.remove('auto-on'); btn.textContent = '⟳ paused';
+    const t = snaps[face], sy = ry, sx = rx;
+    const ty = t.y + Math.round((ry - t.y) / 360) * 360;
+    let p = 0;
+    (function step(){
+      p += 0.045;
+      const e = 1 - Math.pow(1 - Math.min(p,1), 4);
+      rx = sx + (t.x - sx) * e;
+      ry = sy + (ty - sy) * e;
+      apply();
+      if(p < 1) requestAnimationFrame(step);
+    })();
+  };
+
+  scene.addEventListener('mousedown', e => {
+    drag = true; lx = e.clientX; ly = e.clientY;
+    auto = false;
+    const btn = document.getElementById('cube-btn-auto');
+    btn.classList.remove('auto-on'); btn.textContent = '⟳ paused';
+  });
+  window.addEventListener('mousemove', e => {
+    if(!drag) return;
+    ry += (e.clientX - lx) * .45;
+    rx -= (e.clientY - ly) * .45;
+    rx = Math.max(-88, Math.min(88, rx));
+    apply(); lx = e.clientX; ly = e.clientY;
+  });
+  window.addEventListener('mouseup', () => drag = false);
+  scene.addEventListener('touchstart', e => {
+    drag = true; lx = e.touches[0].clientX; ly = e.touches[0].clientY; auto = false;
+  }, {passive:true});
+  scene.addEventListener('touchmove', e => {
+    if(!drag) return;
+    ry += (e.touches[0].clientX - lx) * .45;
+    rx -= (e.touches[0].clientY - ly) * .45;
+    rx = Math.max(-88, Math.min(88, rx));
+    apply(); lx = e.touches[0].clientX; ly = e.touches[0].clientY;
+  }, {passive:true});
+  scene.addEventListener('touchend', () => drag = false);
+
+  const cubeData = {
+    offensive: { title:'offensive security', num:'01', skills:['Penetration Testing','OSINT & Reconnaissance','Web Application Security','Network Security','Red Teaming','Phishing Detection'] },
+    tools:     { title:'security tools',     num:'03', skills:['Kali Linux','Burp Suite','Nmap / Wireshark','Metasploit','OWASP ZAP','ffuf / Gobuster'] },
+    languages: { title:'programming languages', num:'05', skills:['Python','Java','Bash Scripting','JavaScript','SQL','HTML / CSS'] },
+    concepts:  { title:'security concepts', num:'04', skills:['OWASP Top 10','Cryptography','Incident Response','SIEM / IDS','SAST / SCA','PCI DSS'] },
+    cloud:     { title:'cloud & os',        num:'02', skills:['Linux','Windows','AWS','Azure IAM','GCP Fundamentals','MySQL'] },
+    achievements:{ title:'track record',    num:'06', skills:['TryHackMe — Top 15%','50+ Labs Completed','KPMG CTF 2025','Mastercard Simulation','Bronze League #1','IEEE Event Head'] }
+  };
+
+  window.openCubePanel = function(cat){
+    const d = cubeData[cat]; if(!d) return;
+    document.getElementById('cp-title').textContent = d.title;
+    document.getElementById('cp-num').textContent = d.num + ' / 06';
+    document.getElementById('cube-face-id').textContent = 'face ' + d.num + ' / 06';
+    document.getElementById('cube-status-txt').textContent = d.title + ' — expanded';
+    document.getElementById('sk-grid').innerHTML = d.skills.map((s,i) => `
+      <div class="sk">
+        <span class="sk-num">${String(i+1).padStart(2,'0')}</span>
+        <span class="sk-name">${s}</span>
+        <div class="sk-dot"></div>
+      </div>
+    `).join('');
+    document.getElementById('cube-panel').classList.add('open');
+  };
+
+  window.closeCubePanel = function(){
+    document.getElementById('cube-panel').classList.remove('open');
+    document.getElementById('cube-status-txt').textContent = 'drag to rotate · click any face to expand';
+    document.getElementById('cube-face-id').textContent = '— / 06';
+  };
+})();
