@@ -415,7 +415,7 @@ body.light .about-img-wrap:hover img {
   .about-currently { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 /* ===== SKILLS CARDS ===== */
-.card-grid {
+/* .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
@@ -441,7 +441,7 @@ body.light .about-img-wrap:hover img {
 .skill-item { display:flex;flex-direction:column;align-items:center;gap:6px;width:60px; }
 .skill-item img { width:36px;height:36px;object-fit:contain;filter:brightness(.9);transition:filter .2s,transform .2s; }
 .skill-item:hover img { filter:brightness(1.2);transform:scale(1.1); }
-.skill-item p { font-size:.68rem;color:var(--text-dim);text-align:center;line-height:1.2; }
+.skill-item p { font-size:.68rem;color:var(--text-dim);text-align:center;line-height:1.2; } */
 
 /* ===== 3D SKILL CUBE ===== */
 .cube-wrap { display:flex; flex-direction:column; align-items:center; }
