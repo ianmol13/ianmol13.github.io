@@ -611,6 +611,15 @@ footer {
 }
 .cursor.lens-on { transform:translate(-50%,-50%) scale(2.5);background:var(--primary); }
 
+/* light theme cursor fix */
+body.light .cursor {
+  background: var(--primary);
+  mix-blend-mode: multiply;
+}
+body.light .cursor.lens-on {
+  background: var(--purple);
+  mix-blend-mode: multiply;
+}
 /* ===== PROJECT MODAL ===== */
 .project-overlay { position:fixed;inset:0;background:rgba(0,0,20,.85);backdrop-filter:blur(6px);z-index:2000;opacity:0;pointer-events:none;transition:opacity .3s; }
 .project-overlay.visible { opacity:1;pointer-events:all; }
