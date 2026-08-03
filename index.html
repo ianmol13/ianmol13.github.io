@@ -1,492 +1,696 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anmol Kumar | Cybersecurity Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anmol Kumar — Cybersecurity Engineer</title>
+<meta name="description" content="Anmol Kumar is a Cybersecurity Engineering student at HIT, top 15% on TryHackMe, IEEE Management Head, and builder of real security tools. Open to internships and full-time roles.">
+<!-- Open Graph -->
+<meta property="og:title"       content="Anmol Kumar — Cybersecurity Engineer">
+<meta property="og:description" content="Top 15% TryHackMe · IEEE HIT SB Management Head · Builder of real offensive security tools. Open to opportunities.">
+<meta property="og:image"       content="https://ianmol13.me/Anmol1.jpeg">
+<meta property="og:url"         content="https://ianmol13.me">
+<meta property="og:type"        content="website">
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="twitter:title"      content="Anmol Kumar — Cybersecurity Engineer">
+<meta name="twitter:description" content="Top 15% TryHackMe · IEEE HIT SB Management Head · Builder of real offensive security tools.">
+<meta name="twitter:image"      content="https://ianmol13.me/Anmol1.jpeg">
+
+
+
+<!-- FAVICON -->
+<link rel="icon" type="image/jpeg" href="AK.png">
+<link rel="apple-touch-icon" href="AK.png">
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <a href="#about" class="skip-link">Skip to content</a>
 
-  <!-- Scanlines overlay -->
-  <div class="scanlines" aria-hidden="true"></div>
-  <!-- Cursor -->
-  <div class="cursor" aria-hidden="true"></div>
+  <script src="script.js" defer></script>
 
-  <!-- HEADER -->
-  <header aria-label="Site header">
-    <div class="logo" aria-label="Logo"><span class="prompt-sym">root@anmol</span><span class="logo-sep">:</span><span class="logo-path">~</span><span class="logo-hash">#</span></div>
+<!-- SCROLL PROGRESS BAR -->
+<div class="progress-bar" id="progressBar" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+<!-- FIX #28: noscript fallback — show all content without JS -->
+<noscript>
+  <style>.reveal{opacity:1!important;transform:none!important}</style>
+</noscript>
 
-    <button id="theme-toggle" class="term-toggle" aria-label="Toggle theme">
-  <span class="term-toggle-off">[light]</span>
-  <span class="term-toggle-on">[dark]</span>
-</button>
+<!-- MOBILE OVERLAY -->
+<div class="mob-menu" id="mobMenu" role="dialog" aria-label="Navigation menu">
+  <button class="mob-close" id="mobClose">[ close ]</button>
+  <a href="#about"      class="mob-lnk">About</a>
+  <a href="#skills"     class="mob-lnk">Skills</a>
+  <a href="#projects"   class="mob-lnk">Projects</a>
+  <a href="#experience" class="mob-lnk">Experience</a>
+  <a href="#education"  class="mob-lnk">Education</a>
+  <a href="#reports"    class="mob-lnk">Reports</a>
+  <a href="#leadership" class="mob-lnk">Leadership</a>
+  <a href="#contact"    class="mob-lnk">Contact</a>
+  <a href="https://ianmol13.me/Anmol_Kumar_Resume_Cybersecurity.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--accent);margin-top:8px;">↓ Resume</a>
+</div>
 
-    <nav aria-label="Primary">
-      <ul id="nav-links" aria-live="polite">
-        <li><a href="#about" data-spy>About</a></li>
-        <li><a href="#skills" data-spy>Skills</a></li>
-        <li><a href="#projects" data-spy>Projects</a></li>
-        <li><a href="#experiences" data-spy>Experience</a></li>
-        <li><a href="#certifications" data-spy>Certs</a></li>
-        <li><a href="#education" data-spy>Education</a></li>
-        <li><a href="#contact" data-spy>Contact</a></li>
+<!-- NAV -->
+<nav id="nav">
+  <!-- FIX #20: aria-label on logo link -->
+  <a href="#" class="nav-logo" aria-label="Anmol Kumar — back to top">anmol<span>@sec:~$</span></a>
+  <ul class="nav-links">
+    <li><a href="#about"      data-s="about">About</a></li>
+    <li><a href="#skills"     data-s="skills">Skills</a></li>
+    <li><a href="#projects"   data-s="projects">Projects</a></li>
+    <li><a href="#experience" data-s="experience">Experience</a></li>
+    <li><a href="#education"  data-s="education">Education</a></li>
+    <li><a href="#reports"    data-s="reports">Reports</a></li>
+    <li><a href="#leadership"    data-s="leadership">Leadership</a></li>
+    <li><a href="#contact"    data-s="contact">Contact</a></li>
+  </ul>
+  <a href="https://ianmol13.me/Anmol_Kumar_Resume_Cybersecurity.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta">Resume ↓</a>
+  <!-- FIX #21: aria-expanded toggled via JS -->
+  <button class="hamburger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hb-lines"><span></span><span></span><span></span></div>
+  </button>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <!-- <div class="hero-eyebrow">Top 7% TryHackMe · Open to Opportunities</div> -->
+      <h1 class="hero-name">
+        <span class="outline">Cybersecurity</span>
+        <span class="solid">Engineer</span>
+      </h1>
+      <p class="hero-sub">
+        Hi, I'm <span class="hl">Anmol Kumar</span>.<br>
+        I break systems before the bad guys do —<br>
+        Penetration Testing, Red Teaming, Bug Bounty &amp; OSINT.
+      </p>
+      <!-- FIX #13: split pill text at natural break point -->
+      <div class="now-pill">
+        <div class="pdot"></div>
+        <span>Preparing: <strong>eJPT → CEH → OSCP</strong><br>Building security tools</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-p">View My Work →</a>
+        <a href="#contact"  class="btn-s">Let's Talk</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-val">90<em>+</em></div><div class="hstat-lbl">THM Rooms</div></div>
+        <div class="hstat"><div class="hstat-val">Top<em> 7%</em></div><div class="hstat-lbl">TryHackMe</div></div>
+        <div class="hstat"><div class="hstat-val">10<em>+</em></div><div class="hstat-lbl">Events Led</div></div>
+        <div class="hstat"><div class="hstat-val">100<em>+</em></div><div class="hstat-lbl">Participants</div></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-card">
+        <div class="corner-dot cd-tl"></div>
+        <div class="corner-dot cd-br"></div>
+
+        <div class="fbadge fb-tr">
+          <div class="fbadge-val">Top 7%</div>
+          <div class="fbadge-lbl">TryHackMe Global</div>
+        </div>
+
+        <div class="photo-frame">
+          <!-- FIX #19: width/height to prevent CLS -->
+          <img src="Anmol.png" alt="Anmol Kumar, Cybersecurity Engineer"
+            width="260" height="320" loading="eager"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="photo-fallback" style="display:none">
+            <div class="photo-initials">AK</div>
+            <div class="photo-lbl">anmol kumar</div>
+          </div>
+        </div>
+
+        <!-- FIX #4: name card is sibling of photo-frame (not child), avoids overflow:hidden clip -->
+        <div class="pnamecard">
+          <div class="pnc-name">Anmol Kumar</div>
+          <div class="pnc-role">Cybersecurity Engineer</div>
+          <div class="pnc-status"><div class="pnc-dot"></div>Open to Opportunities</div>
+        </div>
+
+        <div class="fbadge fb-bl">
+          <div class="fbadge-val">90+</div>
+          <div class="fbadge-lbl">THM Rooms Done</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about" class="surface">
+  <div class="wrap">
+    <div class="about-wrap">
+      <div>
+        <div class="eyebrow">About</div>
+        <h2 class="sec-heading">Curiosity first.<br>Security second.</h2>
+        <div class="acard">
+          <div class="aavatar">
+            <img src="Anmol1.png" alt="Anmol Kumar" width="72" height="72" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'ainit\'>AK</span>'">
+          </div>
+          <div>
+            <div class="ainfo-name">Anmol Kumar</div>
+            <div class="ainfo-title">Cybersecurity Engineer</div>
+            <div class="ainfo-loc">Haldia, West Bengal, India</div>
+          </div>
+        </div>
+        <div class="about-body">
+          <p>My journey into cybersecurity didn't start with a course — it started with <strong>curiosity</strong>. I wanted to know how systems break before I could understand how to defend them.</p>
+          <p>From free resources to building my own tools, I evolved into <strong>Penetration Testing, Red Teaming, Bug Bounty, and offensive security research</strong>. Every project exists because I wanted to own the attack surface, not just defend it.</p>
+          <p>At <strong>IEEE HIT SB</strong>, leading 10+ technical events showed me that great security work isn't just technical — it's about communication and making complexity accessible.</p>
+          <p>Currently Preparing the <strong>eJPT → CEH → OSCP</strong> track while building security tools and contributing to open-source security projects.</p>
+          <div class="itags">
+            <span class="itag">Malware Analysis</span>
+            <span class="itag">CTF Competitions</span>
+            <span class="itag">Penetration Testing</span>
+            <span class="itag">Red Teaming</span>
+            <span class="itag">Open Source Security</span>
+            <span class="itag">Threat Modeling</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="thm">
+          <div class="thm-hd">
+            <div class="thm-ico">o</div>
+            <div><div class="thm-nm">TryHackMe</div><div class="thm-handle">@whiteghost99</div></div>
+          </div>
+          <div class="thm-row">
+            <div class="tstat"><div class="tstat-v">Top<br>7%</div><div class="tstat-l">Global Rank</div></div>
+            <div class="tstat"><div class="tstat-v">90+</div><div class="tstat-l">Rooms Done</div></div>
+            <div class="tstat"><div class="tstat-v">#1</div><div class="tstat-l">Bronze League</div></div>
+          </div>
+          <div class="tbadges">
+            <!-- <span class="tbadge y">🥉 Bronze League 1st</span>
+            <span class="tbadge g">Top 15% Global</span>
+            <span class="tbadge b">50+ Labs</span> -->
+          </div>
+          <a href="https://tryhackme.com/p/whiteghost99" target="_blank" rel="noopener noreferrer" class="thm-lnk">View Profile ↗</a>
+        </div>
+        <div class="cert-eyebrow">Certifications</div>
+        <div class="certs">
+          <a href="https://drive.google.com/file/d/1RDL5eQF8wGnPQUTtB504Lim2-q__cHXo/view" target="_blank" rel="noopener noreferrer" class="cert">
+            <span class="cert-ico">🔵</span>
+            <div><div class="cert-nm">Network Technician Career Path</div><div class="cert-org">Cisco · Feb 2025</div></div>
+            <span class="cert-tag">View ↗</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1EZPxZTT3IhRjdZZca9_6cSQm2lTbW2Xo/view" target="_blank" rel="noopener noreferrer" class="cert">
+            <span class="cert-ico">🟢</span>
+            <div><div class="cert-nm">Pre Security</div><div class="cert-org">TryHackMe · July 2025</div></div>
+            <span class="cert-tag">View ↗</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1_g1YU-OgC_i7uc47PbowC8APdgd_TYPs/view" target="_blank" rel="noopener noreferrer" class="cert">
+            <span class="cert-ico">🏆</span>
+            <div><div class="cert-nm">Hackathon — CTF</div><div class="cert-org">KPMG · 2025</div></div>
+            <span class="cert-tag">View ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Skills</div>
+    <h2 class="sec-heading">Technical Proficiency</h2>
+    <p class="sec-sub">● Advanced &nbsp;◐ Proficient &nbsp;○ Familiar — honest self-assessment, not percentages.</p>
+    <div class="skills-grid reveal">
+      <div class="scard">
+        <div class="scat">Offensive</div><div class="snm">Offensive Security</div>
+        <div class="tiers">
+          <div class="tier"><span class="tier-lbl">Web App Security</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div></div><span class="tier-badge">Proficient</span></div>
+          <div class="tier"><span class="tier-lbl">Network Pentesting</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+          <div class="tier"><span class="tier-lbl">Red Teaming</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+          <div class="tier"><span class="tier-lbl">Bug Bounty </span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+        </div>
+        <div class="stags"><span class="tag">Nmap</span><span class="tag">Burp Suite</span><span class="tag">Metasploit</span><span class="tag">SQLmap</span><span class="tag">ffuf</span></div>
+      </div>
+      <div class="scard">
+        <div class="scat">Intelligence</div><div class="snm">Reconnaissance</div>
+        <div class="tiers">
+          <div class="tier"><span class="tier-lbl">Subdomain Recon</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d"></div></div><span class="tier-badge">Advanced</span></div>
+          <div class="tier"><span class="tier-lbl">Passive Recon</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div></div><span class="tier-badge">Proficient</span></div>
+          <div class="tier"><span class="tier-lbl">Asset Discovery</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div></div><span class="tier-badge">Proficient</span></div>
+
+        </div>
+        <div class="stags"><span class="tag">Sublist3r</span><span class="tag">crt.sh</span><span class="tag">Shodan</span><span class="tag">OSINT</span></div>
+      </div>
+      <div class="scard">
+        <div class="scat">Development</div><div class="snm">Languages</div>
+        <div class="tiers">
+          <div class="tier"><span class="tier-lbl">Python</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d"></div></div><span class="tier-badge">Advanced</span></div>
+          <div class="tier"><span class="tier-lbl">SQL</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+        </div>
+        <div class="stags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">Bash</span><span class="tag">HTML/CSS/JS</span></div>
+      </div>
+      <div class="scard">
+        <div class="scat">Cryptography</div><div class="snm">Security Concepts</div>
+        <div class="tiers">
+          <div class="tier"><span class="tier-lbl">Cryptography</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+          <div class="tier"><span class="tier-lbl">Threat Modeling</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+          <div class="tier"><span class="tier-lbl">OWASP Top 10</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+        </div>
+        <div class="stags"><span class="tag">AES-GCM</span><span class="tag">PBKDF2</span><span class="tag">OWASP</span><span class="tag">CVE/CVSS</span></div>
+      </div>
+      <div class="scard">
+        <div class="scat">Tooling</div><div class="snm">Security Tools</div>
+        <div class="tiers">
+          <div class="tier"><span class="tier-lbl">Burp Suite</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div></div><span class="tier-badge">Proficient</span></div>
+          <div class="tier"><span class="tier-lbl">Nmap</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+          <div class="tier"><span class="tier-lbl">John the Ripper</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+          <div class="tier"><span class="tier-lbl">Hydra</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+          <div class="tier"><span class="tier-lbl">WPScan</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Familiar</span></div>
+        </div>
+        <div class="stags"><span class="tag">Wireshark</span><span class="tag">Metasploit</span><span class="tag">SQLMap</span><span class="tag">Gobuster</span></div>
+      </div>
+      <div class="scard">
+        <div class="scat">Systems</div><div class="snm">Operating System</div>
+        <div class="tiers">
+          <div class="tier"><span class="tier-lbl">Kali Linux</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d h"></div><div class="d"></div></div><span class="tier-badge">Proficient</span></div>
+          <div class="tier"><span class="tier-lbl">Windows</span><div class="dots"><div class="d f"></div><div class="d f"></div><div class="d f"></div><div class="d"></div><div class="d"></div></div><span class="tier-badge">Proficient</span></div>
+        </div>
+        <div class="stags"><span class="tag">Linux</span><span class="tag">Windows</span><span class="tag">TCP/IP</span><span class="tag">Cisco</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section id="projects" class="surface">
+  <div class="wrap">
+    <div class="eyebrow">Projects</div>
+    <h2 class="sec-heading">What I've Built</h2>
+    <p class="sec-sub">Real tools built to understand attack surfaces — not just portfolio pieces.</p>
+    <div class="proj-grid reveal">
+
+  <!-- Project 1: SOC Lab -->
+  <div class="pcard feat">
+    <div class="ptype"><span class="pdot" style="background:#00E5FF;box-shadow:0 0 6px #00E5FF"></span>SOC Lab · SIEM &amp; Threat Detection</div>
+    <div class="pnm">Home SOC Lab</div>
+    <div class="pimpact">Centralized log monitoring · MITRE ATT&amp;CK threat mapping</div>
+    <div class="pdesc">Built a Home Security Operations Center using <strong>Wazuh</strong>, <strong>Sysmon</strong>, and <strong>VirtualBox</strong> to simulate enterprise-grade security monitoring. Configured centralized log collection from Windows and Linux endpoints, investigated security alerts, performed alert triage, and mapped detected techniques to the <strong>MITRE ATT&amp;CK Framework</strong>.</div>
+    <div class="pfoot">
+      <div class="ptags">
+        <span class="tag">Wazuh</span>
+        <span class="tag">Sysmon</span>
+        <span class="tag">VirtualBox</span>
+        <span class="tag">SIEM</span>
+        <span class="tag">MITRE ATT&amp;CK</span>
+        <span class="tag">Incident Response</span>
+        <span class="tag">Log Analysis</span>
+      </div>
+      <div class="plinks">
+        <a href="#" class="plnk">Writeup →</a>
+        <button class="preview-btn" onclick="openGallery('Home SOC Lab', 'soc')">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2: Password Vault -->
+  <div class="pcard">
+    <div class="ptype"><span class="pdot" style="background:var(--accent);box-shadow:0 0 6px var(--accent)"></span>Security Tool · Java</div>
+    <div class="pnm">Secure Password Vault</div>
+    <div class="pimpact">AES-128-GCM + PBKDF2 — zero external dependencies</div>
+    <div class="pdesc">A fully encrypted password manager using Java's standard libraries. CLI and GUI interfaces, rate limiting, memory safety, and automatic backup. Built to understand how cryptography and software engineering blend in practice.</div>
+    <div class="pfoot">
+      <div class="ptags"><span class="tag">Java</span><span class="tag">AES-GCM</span><span class="tag">PBKDF2</span><span class="tag">GUI</span></div>
+      <div class="plinks">
+        <a href="https://github.com/ianmol13" target="_blank" rel="noopener noreferrer" class="plnk">GitHub →</a>
+        <button class="preview-btn" onclick="openGallery('SVP', 'vault')">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3: Subdomain Enumeration -->
+  <div class="pcard">
+    <div class="ptype"><span class="pdot" style="background:#0096FF;box-shadow:0 0 6px #0096FF"></span>OSINT Tool · Python</div>
+    <div class="pnm">Subdomain Enumeration Tool</div>
+    <div class="pimpact">500+ subdomains/hour · 40% faster with threading</div>
+    <div class="pdesc">Integrates crt.sh and Sublist3r APIs for high-speed recon. Multi-threaded architecture with CSV export. Built to understand OSINT, API integration, and automation in real reconnaissance workflows.</div>
+    <div class="pfoot">
+      <div class="ptags"><span class="tag">Python</span><span class="tag">Threading</span><span class="tag">crt.sh</span><span class="tag">Sublist3r</span></div>
+      <div class="plinks">
+        <a href="https://github.com/ianmol13/Subdomain_enumeration_tool" target="_blank" rel="noopener noreferrer" class="plnk">GitHub →</a>
+        <button class="preview-btn" onclick="openGallery('SET', 'subdomain')">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 4: Portfolio -->
+  <div class="pcard">
+    <div class="ptype"><span class="pdot" style="background:#FFB800;box-shadow:0 0 6px #FFB800"></span>Web · Design</div>
+    <div class="pnm">Personal Portfolio</div>
+    <div class="pimpact">Live at ianmol13.me — vanilla HTML/CSS/JS</div>
+    <div class="pdesc">Mobile-first portfolio built with no frameworks. Clean typography, smooth animations, full responsive layout. Demonstrates front-end design and engineering capability without a single dependency.</div>
+    <div class="pfoot">
+      <div class="ptags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">UI/UX</span></div>
+      <div class="plinks">
+        <a href="https://ianmol13.github.io" target="_blank" rel="noopener noreferrer" class="plnk">Live ↗</a>
+        <a href="https://github.com/ianmol13/ianmol13.github.io" target="_blank" rel="noopener noreferrer" class="plnk">GitHub →</a>
+        <button class="preview-btn" onclick="openGallery('Personal Portfolio', 'portfolio')">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+  </div>
+</section>
+
+<!-- ══════════ EXPERIENCE ══════════ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow">Experience</div>
+    <h2 class="sec-heading">In the Field</h2>
+    <p class="sec-sub">Hands-on exposure to real-world threat analysis, phishing detection, and security awareness design.</p>
+    <div class="exp-card reveal">
+      <div class="exp-hd">
+        <div>
+          <div class="exp-role">Cybersecurity Job Simulation</div>
+          <div class="exp-co">Mastercard</div>
+        </div>
+        <div class="exp-date">Aug 2024</div>
+      </div>
+      <ul class="exp-list">
+        <li>Identified and reported <strong>15+ phishing attacks</strong> through log inspection and anomaly detection</li>
+        <li>Designed security awareness modules that reduced simulated incident frequency by <strong>25%</strong></li>
+        <li>Gained deep exposure to <strong>PCI DSS compliance</strong> for financial data handling organisations</li>
+        <li>Learned how security education and technical controls work together as a layered defence</li>
       </ul>
-    </nav>
-
-    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <!-- HERO -->
-  <section id="hero" class="hero-section">
-    <div class="hero-terminal">
-      <div class="hero-titlebar">
-        <span class="dot d-red"></span><span class="dot d-yellow"></span><span class="dot d-green"></span>
-        <span class="hero-title-text">anmol@portfolio: ~</span>
-        <span class="hero-time" id="hero-clock"></span>
+      <div class="stags" style="margin-top:18px">
+        <span class="tag">SIEM</span><span class="tag">IDS</span><span class="tag">Phishing Analysis</span><span class="tag">PCI DSS</span><span class="tag">Log Analysis</span>
       </div>
-      <div class="hero-body">
-        <div class="hero-left">
-          <p class="hero-line"><span class="hero-prompt">anmol@portfolio:~$</span> <span class="hero-cmd">whoami</span></p>
-          <h3 class="hero-greeting">Hello, I'm</h3>
-          <h1 class="hero-name"><span>AnmolKumar.</span></h1>
-          <h2 class="hero-role">I am a <span class="intro"></span><span class="typing-cursor">|</span></h2>
-          <div class="hero-actions">
-            <a href="Anmol_Kumar_Resume_Cybersecurity.pdf" class="resume-btn" download="Anmol_Kumar_Resume_Cybersecurity.pdf" target="_blank" rel="noopener">⬇ Resume</a>
-            <a class="icon-link" href="https://github.com/ianmol13" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-              GitHub
-            </a>
-            <a class="icon-link" href="https://linkedin.com/in/ianmol13" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
-            </a>
-          </div>
-          <div class="hero-output-block">
-            <p class="hero-prompt-line"><span class="hero-prompt">anmol@portfolio:~$</span> <span class="hero-cmd">cat status.txt</span></p>
-            <p class="hero-out"><span class="out-key">rank</span>     : <span class="out-val-cyan">Top 15% on TryHackMe | 50+ Labs</span></p>
-            <p class="hero-out"><span class="out-key">status</span>   : <span class="out-val-green">● ONLINE — Open to opportunities</span></p>
-          </div>
-        </div>
-        <div class="hero-right">
-          <div class="photo-container">
-            <div class="photo-frame-corner tl"></div>
-            <div class="photo-frame-corner tr"></div>
-            <div class="photo-frame-corner bl"></div>
-            <div class="photo-frame-corner br"></div>
-            <img src="Anmol1.jpeg"
-              srcset="Anmol1.jpeg 600w, Anmol1.jpeg 900w"
-              sizes="(max-width: 900px) 220px, 300px"
-              alt="Anmol Kumar, Cybersecurity Engineer"
-              decoding="async" />
-            <div class="photo-scan"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="content-section">
-  <div class="section-header-terminal">
-    <span class="sec-prompt">anmol@portfolio:~$</span>
-    <span class="sec-cmd">cat about.md</span>
-  </div>
-  <h3 class="section-header">// About Me</h3>
-
-  <div class="about-new">
-
-    <div class="about-top">
-
-      <!-- IMAGE -->
-      <div class="about-img-wrap">
-        <img src="My Pic.jpg" alt="Anmol Kumar" />
-        <div class="about-scan"></div>
-        <div class="aimg-corner atl"></div>
-        <div class="aimg-corner atr"></div>
-        <div class="aimg-corner abl"></div>
-        <div class="aimg-corner abr"></div>
-      </div>
-
-      <!-- STORY -->
-      <div class="about-story">
-        <div class="as-label">// story</div>
-        <p>
-          My journey into cybersecurity didn't start with a course or a degree — it started with curiosity. I wanted to know how systems break before I could understand how to build them. That mindset has shaped everything I do.
-        </p>
-        <p>
-          I began as a complete beginner, learning through free resources and building small tools just to see how things worked. Over time that evolved into serious hardware hacking, RF exploitation, and offensive security research. Every project I've built — from a <span class="about-hi">Subdomain Enumeration Engine</span> to a <span class="about-hi">cryptographic Password Vault</span> — exists because I wanted to understand the attack surface, not just defend it.
-        </p>
-        <p>
-          At IEEE HIT, leading 5+ technical events taught me that great security work isn't just technical — it's about communication, coordination, and making complex ideas accessible. I bring the same clarity to my code.
-        </p>
-        <p>
-          Outside of hacking, I practice CTFs on TryHackMe and HackTheBox, analyze malware samples, and document what I learn. I believe the best security engineers are <span class="about-hi">perpetual students</span> — always one step behind the attacker, always trying to close the gap.
-        </p>
-      </div>
-    </div>
-
-    <!-- CURRENTLY -->
-    <div class="about-currently">
-      <div class="ac-dot"></div>
-      <div class="ac-text">
-        Currently grinding the <strong>eJPT → CEH → OSCP</strong> certification track while building hardware security tools and contributing to open-source security projects.
-      </div>
-    </div>
-
-    <!-- INTEREST TAGS -->
-    <div class="about-tags">
-      <span class="atag">Malware Analysis</span>
-      <span class="atag">CTF Competitions</span>
-      <span class="atag">Open Source Security</span>
-      <span class="atag">Security Research</span>
-      <span class="atag">Threat Modeling</span>
-    </div>
-
-  </div>
-</section>
-
-  <section id="skills" class="content-section">
-  <div class="section-header-terminal">
-    <span class="sec-prompt">anmol@portfolio:~$</span>
-    <span class="sec-cmd">render skills --mode=3d-cube</span>
-  </div>
-  <h3 class="section-header">// Technical Skills</h3>
-
-  <div class="cube-wrap">
-    <div class="scene" id="scene">
-      <div class="cube" id="cube">
-
-        <div class="face face-front" onclick="openCubePanel('offensive')">
-          <div class="cdot tl"></div><div class="cdot tr"></div>
-          <div class="cdot bl"></div><div class="cdot br"></div>
-          <div class="face-num">01 / 06</div>
-          <div class="face-name">Offensive<br>Security</div>
-          <div class="face-bar"></div>
-          <div class="face-sub">6 skills</div>
-        </div>
-
-        <div class="face face-back" onclick="openCubePanel('cloud')">
-          <div class="cdot tl"></div><div class="cdot tr"></div>
-          <div class="cdot bl"></div><div class="cdot br"></div>
-          <div class="face-num">02 / 06</div>
-          <div class="face-name">Cloud<br>& OS</div>
-          <div class="face-bar"></div>
-          <div class="face-sub">6 skills</div>
-        </div>
-
-        <div class="face face-right" onclick="openCubePanel('tools')">
-          <div class="cdot tl"></div><div class="cdot tr"></div>
-          <div class="cdot bl"></div><div class="cdot br"></div>
-          <div class="face-num">03 / 06</div>
-          <div class="face-name">Security<br>Tools</div>
-          <div class="face-bar"></div>
-          <div class="face-sub">6 skills</div>
-        </div>
-
-        <div class="face face-left" onclick="openCubePanel('concepts')">
-          <div class="cdot tl"></div><div class="cdot tr"></div>
-          <div class="cdot bl"></div><div class="cdot br"></div>
-          <div class="face-num">04 / 06</div>
-          <div class="face-name">Security<br>Concepts</div>
-          <div class="face-bar"></div>
-          <div class="face-sub">6 skills</div>
-        </div>
-
-        <div class="face face-top" onclick="openCubePanel('languages')">
-          <div class="cdot tl"></div><div class="cdot tr"></div>
-          <div class="cdot bl"></div><div class="cdot br"></div>
-          <div class="face-num">05 / 06</div>
-          <div class="face-name">Programming<br>Languages</div>
-          <div class="face-bar"></div>
-          <div class="face-sub">6 skills</div>
-        </div>
-
-        <div class="face face-bottom" onclick="openCubePanel('achievements')">
-          <div class="cdot tl"></div><div class="cdot tr"></div>
-          <div class="cdot bl"></div><div class="cdot br"></div>
-          <div class="face-num">06 / 06</div>
-          <div class="face-name">Track<br>Record</div>
-          <div class="face-bar"></div>
-          <div class="face-sub">6 entries</div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="cube-ctrl-wrap">
-      <div class="cube-ctrl-label">// navigate</div>
-      <div class="cube-ctrl-row">
-        <button class="cube-ctrl auto-on" id="cube-btn-auto" onclick="toggleCubeAuto(this)">⟳ rotate</button>
-        <button class="cube-ctrl" onclick="cubeSnap('front');openCubePanel('offensive')">offensive</button>
-        <button class="cube-ctrl" onclick="cubeSnap('right');openCubePanel('tools')">tools</button>
-        <button class="cube-ctrl" onclick="cubeSnap('top');openCubePanel('languages')">languages</button>
-        <button class="cube-ctrl" onclick="cubeSnap('left');openCubePanel('concepts')">concepts</button>
-        <button class="cube-ctrl" onclick="cubeSnap('back');openCubePanel('cloud')">cloud</button>
-        <button class="cube-ctrl" onclick="cubeSnap('bottom');openCubePanel('achievements')">record</button>
-      </div>
-    </div>
-
-    <div class="cube-panel" id="cube-panel">
-      <div class="cp-head">
-        <div class="cp-title" id="cp-title">offensive security</div>
-        <div class="cp-meta">
-          <span class="cp-num" id="cp-num">01 / 06</span>
-          <span class="cp-close" onclick="closeCubePanel()">close ×</span>
-        </div>
-      </div>
-      <div class="sk-grid" id="sk-grid"></div>
-    </div>
-
-    <div class="cube-status">
-      <span><span class="cube-sdot"></span><span id="cube-status-txt">drag to rotate · click any face to expand</span></span>
-      <span id="cube-face-id">— / 06</span>
     </div>
   </div>
 </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="content-section">
-    <div class="section-header-terminal">
-      <span class="sec-prompt">anmol@portfolio:~$</span>
-      <span class="sec-cmd">ls -la projects/</span>
-    </div>
-    <h3 class="section-header">// Projects</h3>
-    <div class="projects-grid">
-
-      <article class="project-card">
-        <div class="project-card-header">
-          <span class="project-num">01</span>
-          <h4>Secure Password Vault (Java)</h4>
+<!-- ══════════ EDUCATION ══════════ -->
+<section id="education" class="surface">
+  <div class="wrap">
+    <div class="eyebrow">Education</div>
+    <h2 class="sec-heading">Academic Background</h2>
+    <p class="sec-sub">Built on cybersecurity fundamentals — sharpened by labs, CTFs, and real tools.</p>
+    <div class="edu-stack reveal">
+      <div class="edu-card main">
+        <div class="edu-yr">2022 – 2026</div>
+        <div class="edu-deg">B.Tech — CSE (Cyber Security) — 7.01 CGPA</div>
+        <div class="edu-inst">Haldia Institute of Technology · Haldia, West Bengal</div>
+        <div class="edu-note">Management Head at IEEE HIT SB. Active CTF player. Core coursework in offensive security, cryptography, and network security.</div>
+        <div class="stags" style="margin-top:10px">
+          <span class="tag">IEEE HIT SB</span><span class="tag">Management Head</span><span class="tag">CTF Player</span><span class="tag">SWC Member</span><span class="tag">Cricket Team Manager</span>
         </div>
-        <p class="project-summary">A fully encrypted Java password manager built with AES and PBKDF2 for maximum security.</p>
-        <p class="metrics">I have always been fascinated by how encryption protects our most sensitive data, so I built a secure password vault completely from scratch using Java's standard libraries. It uses <strong>AES-128-GCM</strong> encryption and PBKDF2 for key derivation, ensuring strong data security without external dependencies.</p>
-        <div class="threat">I also created both CLI and GUI interfaces, implemented rate limiting and memory safety, and added an automatic backup system to make it production-grade.</div>
-        <div class="threat">This project taught me how cryptography and software engineering blend together to create truly secure applications.</div>
-        <ul class="tags"><li>Java</li><li>Cryptography</li><li>AES</li><li>PBKDF2</li><li>GUI</li></ul>
-        <a href="https://github.com/ianmol13/Subdomain_enumeration_tool" class="btn-link" target="_blank" rel="noopener">
-          <span class="btn-prompt">$</span> view_repo
-        </a>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-header">
-          <span class="project-num">02</span>
-          <h4>Subdomain Enumeration Tool</h4>
-        </div>
-        <p class="project-summary">A high-speed Python tool that uncovers hidden subdomains using OSINT APIs and multithreading.</p>
-        <p class="metrics">This project began as my curiosity about how hackers uncover hidden parts of a website. I developed a Python-based Subdomain Enumeration Tool that integrates crt.sh and Sublist3r APIs to scan over 500 subdomains per hour.</p>
-        <p class="metrics">To make it efficient, I implemented <strong>multi-threading</strong>, boosting scan speed by 40%, and added an <strong>export-to-CSV</strong> feature for better usability.</p>
-        <div class="threat">Through this project, I deepened my understanding of OSINT, API integration, and automation in reconnaissance workflows.</div>
-        <ul class="tags"><li>Python</li><li>OSINT</li><li>API Integration</li><li>Brute-Force</li></ul>
-        <a href="https://github.com/ianmol13/Subdomain_enumeration_tool" class="btn-link" target="_blank" rel="noopener">
-          <span class="btn-prompt">$</span> view_repo
-        </a>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-header">
-          <span class="project-num">03</span>
-          <h4>Personal Portfolio Website</h4>
-        </div>
-        <p class="project-summary">A modern, responsive portfolio built with clean HTML, CSS, and JavaScript.</p>
-        <p class="metrics">This project was created to build a strong online presence and demonstrate my full-stack development and design skills. I focused on clean typography, smooth navigation, and mobile-first responsiveness.</p>
-        <p class="metrics">The site features dynamic sections including projects, skills, education, and contact — all styled with modern CSS (Flexbox, Grid) and subtle animations for enhanced user experience.</p>
-        <div class="threat"><strong>Impact:</strong> Serves as a live representation of my technical and design capabilities, helping recruiters and peers quickly understand my expertise and passion for development.</div>
-        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li><li>UI/UX</li></ul>
-        <a href="https://ianmol13.github.io" class="btn-link" target="_blank" rel="noopener"><span class="btn-prompt">$</span> view_live</a>
-        <a href="https://github.com/ianmol13/ianmol13.github.io" class="btn-link" target="_blank" rel="noopener"><span class="btn-prompt">$</span> view_repo</a>
-      </article>
-
+      </div>
+      <div class="edu-card">
+        <div class="edu-yr">2019 – 2021</div>
+        <div class="edu-deg">Intermediate (12th) — 62.4%</div>
+        <div class="edu-inst">Jamunilal College · Hajipur, Vaishali</div>
+        <div class="edu-note">Science stream, strong grades, participated in academic competitions.</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-yr">2018 – 2019</div>
+        <div class="edu-deg">Matriculation (10th) — 71.8%</div>
+        <div class="edu-inst">Janta High School · Musepur, Siwan</div>
+        <div class="edu-note">Active in extracurriculars. Cricket Team Manager.</div>
+      </div>
     </div>
-  </section>
-
-  <!-- EXPERIENCES -->
-  <section id="experiences" class="content-section">
-    <div class="section-header-terminal">
-      <span class="sec-prompt">anmol@portfolio:~$</span>
-      <span class="sec-cmd">cat experience.log</span>
-    </div>
-    <h3 class="section-header">// Experiences</h3>
-    <div class="experiences-grid">
-
-      <article class="experience-card">
-        <img src="MasterCard.webp" alt="Mastercard Logo" class="exp-logo" loading="lazy">
-        <a href="https://drive.google.com/file/d/1Qv30jstB94gYhRRsfUYzXm5gLw5ZSuXt/view"
-          target="_blank" rel="noopener" class="certificate-badge" aria-label="View certificate">
-          <img src="Cyber Security Job Simulation.png" alt="View certificate" loading="lazy">
-        </a>
-        <h4>Cybersecurity Job Simulation</h4>
-        <p class="exp-role">Mastercard</p>
-        <p class="exp-date">Aug 2024 – Aug 2024</p>
-        <p class="exp-desc">During my cybersecurity simulation with Mastercard, I worked on real-world threat analysis scenarios, identifying and reporting more than 15 phishing attacks through log inspection and anomaly detection.</p>
-        <p class="exp-desc">I also collaborated with simulated departments to design targeted awareness modules that helped reduce incident frequency by 25%.</p>
-        <p class="exp-desc">The experience gave me a deep appreciation for how security and user education go hand in hand in preventing breaches and how crucial PCI DSS compliance is for organizations handling financial data.</p>
-        <ul class="tags"><li>SIEM</li><li>IDS</li><li>Documentation</li></ul>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="content-section">
-  <div class="section-header-terminal">
-    <span class="sec-prompt">anmol@portfolio:~$</span>
-    <span class="sec-cmd">ls certs/ --sort=date</span>
-  </div>
-  <h3 class="section-header">// Certifications</h3>
-  <div class="cert-timeline-cards">
-
-    <article class="cert-card timeline-card">
-      <div class="timeline-marker"></div>
-      <img src="Cisco_logo.png" alt="Cisco" class="cert-logo" loading="lazy" />
-      <a href="https://drive.google.com/file/d/1RDL5eQF8wGnPQUTtB504Lim2-q__cHXo/view" target="_blank" rel="noopener" class="cert-view-btn">$ view_cert</a>
-      <h4>Network Technician Career Path</h4>
-      <div class="cert-issuer">Cisco Networking Academy</div>
-      <div class="dates">Feb 2025</div>
-      <p class="description">Completed networking fundamentals, IP addressing, routing, switching, and network troubleshooting.</p>
-      <ul class="tags"><li>Networking</li><li>Cisco</li><li>IP Routing</li></ul>
-    </article>
-
-    <article class="cert-card timeline-card">
-      <div class="timeline-marker"></div>
-      <img src="Tryhackme logo.png" alt="TryHackMe" class="cert-logo" loading="lazy" />
-      <a href="https://drive.google.com/file/d/1EZPxZTT3IhRjdZZca9_6cSQm2lTbW2Xo/view" target="_blank" rel="noopener" class="cert-view-btn">$ view_cert</a>
-      <h4>Pre Security Path</h4>
-      <div class="cert-issuer">TryHackMe</div>
-      <div class="dates">July 2025</div>
-      <p class="description">Completed foundational cybersecurity path covering networking, Linux, web fundamentals and security concepts.</p>
-      <ul class="tags"><li>Linux</li><li>Networking</li><li>Web Security</li></ul>
-    </article>
-    
-    <article class="cert-card timeline-card">
-      <div class="timeline-marker"></div>
-      <img src="KPMG_Logo.png" alt="KPMG" class="cert-logo" loading="lazy" />
-      <a href="https://drive.google.com/file/d/1_g1YU-OgC_i7uc47PbowC8APdgd_TYPs/view" target="_blank" rel="noopener" class="cert-view-btn">$ view_cert</a>
-      <h4>Hackathon — CTF</h4>
-      <div class="cert-issuer">KPMG</div>
-      <div class="dates">2025</div>
-      <p class="description">Participated in KPMG Hackathon CTF, solving real-world security challenges under competition conditions.</p>
-      <ul class="tags"><li>CTF</li><li>Hackathon</li><li>Pentesting</li></ul>
-    </article>
-
-    <article class="cert-card timeline-card">
-      <div class="timeline-marker"></div>
-      <img src="Tryhackme logo.png" alt="TryHackMe" class="cert-logo" loading="lazy" />
-      <a href="https://tryhackme.com/p/whiteghost99" target="_blank" rel="noopener" class="cert-view-btn">$ view_profile</a>
-      <h4>Top 15% — Bronze League 1st Place</h4>
-      <div class="cert-issuer">TryHackMe</div>
-      <div class="dates">2026</div>
-      <p class="description">Ranked Top 15% globally with 50+ rooms completed. Achieved Bronze League 1st place through consistent CTF and lab solving.</p>
-      <ul class="tags"><li>CTF</li><li>Top 15%</li><li>50+ Labs</li><li>Bronze League</li></ul>
-    </article>
-
   </div>
 </section>
 
-  <!-- EDUCATION -->
-  <section id="education" class="content-section">
-    <div class="section-header-terminal">
-      <span class="sec-prompt">anmol@portfolio:~$</span>
-      <span class="sec-cmd">cat education.json</span>
-    </div>
-    <h3 class="section-header edu-heading">// Education</h3>
-    <div class="education-timeline-cards">
+<!-- ══════════ REPORTS ══════════ -->
+<section id="reports" class="surface">
+  <div class="wrap">
+    <div class="eyebrow">Reports</div>
+    <h2 class="sec-heading">Research &amp; Write-ups</h2>
+    <p class="sec-sub">CTF write-ups, bug bounty disclosures, and security research — documented and shared with the community.</p>
+    <div class="reports-grid reveal">
 
-      <article class="education-card timeline-card">
-        <div class="timeline-marker"></div>
-        <img src="HIT.png" alt="HIT Logo" class="edu-logo" loading="lazy" />
-        <h4>B.Tech in (CSE) Cyber Security</h4>
-        <div class="institute">Haldia Institute of Technology, Haldia, West Bengal</div>
-        <div class="dates">2022 – 2026</div>
-        <p class="description">Pursuing relevant coursework. Part of a Technical Society.</p>
-        <ul class="tags"><li>Society's Management Head</li><li>CTF Player</li><li>Cyber Security</li></ul>
-      </article>
-
-      <article class="education-card timeline-card">
-        <div class="timeline-marker"></div>
-        <img src="JL.jpeg" alt="School Logo" class="edu-logo" loading="lazy" />
-        <h4>Intermediate (12th)</h4>
-        <div class="institute">Jamunilal College, Hajipur, Vaishali</div>
-        <div class="dates">2019 – 2021</div>
-        <p class="description">Science stream, top grades, participated in competitions.</p>
-        <ul class="tags"></ul>
-      </article>
-
-      <article class="education-card timeline-card">
-        <div class="timeline-marker"></div>
-        <h4>Matriculation</h4>
-        <div class="institute">Janta High School, Musepur, Siwan</div>
-        <div class="dates">2018 – 2019</div>
-        <p class="description">Active in extracurricular activities.</p>
-        <ul class="tags"><li>Cricket Team Manager</li></ul>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- LEADERSHIP / ACHIEVEMENTS -->
-  <section id="achievements" class="achievements-section content-section">
-    <div class="section-header-terminal">
-      <span class="sec-prompt">anmol@portfolio:~$</span>
-      <span class="sec-cmd">cat leadership.md</span>
-    </div>
-    <h3 class="achievements-header section-header">// Leadership</h3>
-    <div class="achievements-row">
-      <div class="achievements-text terminal-text-block">
-        <p><strong>Event &amp; Management Head</strong> at <strong>IEEE HIT SB</strong>, where I successfully led 5+ technical events with 100+ participants, overseeing end-to-end event planning, coordination, and execution. Demonstrated strong leadership, team management, and organizational skills, ensuring seamless delivery and high participant engagement.</p>
-      </div>
-      <div class="achievements-image-container">
-        <div class="image-slide">
-          <img src="IEEE1.jpg" alt="IEEE Event 1" class="active" />
-          <img src="IEEE2.jpg" alt="IEEE Event 2" />
-          <img src="IEEE3.jpg" alt="IEEE Event 3" />
-          <img src="IEEE4.jpg" alt="IEEE Event 4" />
-          <button class="slide-btn left" onclick="slidePrev()">&#10094;</button>
-          <button class="slide-btn right" onclick="slideNext()">&#10095;</button>
+      <!-- CTF Report 1: replace '#' with your PDF URL -->
+      <div class="rcard">
+        <div class="rtype"><span class="rdot" style="background:#00FF88;box-shadow:0 0 6px #00FF88"></span>CTF Write-up · TryHackMe</div>
+        <div class="rnm">Cheese CTF - TryHackMe</div>
+        <div class="rmeta">50+ rooms · Top 9% global · Bronze League #1</div>
+        <div class="rdesc">Documented techniques and tooling used across the TryHackMe Pre Security learning path — covering <strong>Linux fundamentals, networking, web hacking, and cryptography</strong>. Each room documented with approach, tooling, and key takeaways.</div>
+        <div class="rfoot">
+          <div class="stags">
+            <span class="tag">TryHackMe</span><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">Web Hacking</span>
+          </div>
+          <div class="rlinks">
+            <span class="rstatus live">Published</span>
+            <button class="rpdf-btn" onclick="openPDF('Pre Security Path — CTF Write-up','https://drive.google.com/file/d/1efmYpM-bb9TJHu7PFB61ACTGv-DLD5h1/view?usp=sharing')">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View PDF
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact-section">
-    <div class="section-header-terminal">
-      <span class="sec-prompt">anmol@portfolio:~$</span>
-      <span class="sec-cmd">ping anmol --establish-connection</span>
-    </div>
-    <h3>// Contact Me</h3>
-    <div class="contact-buttons" style="padding-bottom: 50px;">
-      <a href="tel:9708159436" aria-label="Phone" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone Icon" />
-      </a>
-      <a href="mailto:anmolchaudhary8213@gmail.com" aria-label="Email" target="_blank">
-        <img src="https://img.icons8.com/ios-glyphs/50/ffffff/new-post.png" alt="Email Icon" />
-      </a>
-      <a href="https://github.com/ianmol13" aria-label="GitHub" target="_blank">
-        <img src="https://img.icons8.com/ios-glyphs/50/ffffff/github.png" alt="GitHub Icon" />
-      </a>
-      <a href="https://linkedin.com/in/ianmol13" aria-label="LinkedIn" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn Icon" />
-      </a>
-      <a href="https://instagram.com/_anmolchaudhary._" aria-label="Instagram" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram Icon" />
-      </a>
-      <a href="https://facebook.com/anmol.chaudhury.7" aria-label="Facebook" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook Icon" />
-      </a>
-    </div>
-  </section>
+      <div class="rcard">
+        <div class="rtype"><span class="rdot" style="background:#00FF88;box-shadow:0 0 6px #00FF88"></span>CTF Write-up · TryHackMe</div>
+        <div class="rnm"> Room 404 - TryHackMe</div>
+        <div class="rmeta">50+ rooms · Top 9% global · Bronze League #1</div>
+        <div class="rdesc">Documented techniques and tooling used across the TryHackMe Pre Security learning path — covering <strong>Linux fundamentals, networking, web hacking, and cryptography</strong>. Each room documented with approach, tooling, and key takeaways.</div>
+        <div class="rfoot">
+          <div class="stags">
+            <span class="tag">TryHackMe</span><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">Web Hacking</span>
+          </div>
+          <div class="rlinks">
+            <span class="rstatus live">Published</span>
+            <button class="rpdf-btn" onclick="openPDF('Pre Security Path — CTF Write-up','https://drive.google.com/file/d/1OXYva9CCoT_FWVqbpNbdy2oMol6eBF_u/view?usp=sharing')">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View PDF
+            </button>
+          </div>
+        </div>
+      </div>
 
-  <footer class="footer">
-    <span class="footer-prompt">anmol@portfolio:~$</span> echo "&copy; 2025 Anmol Kumar. All rights reserved."
-  </footer>
+      <div class="rcard">
+        <div class="rtype"><span class="rdot" style="background:#00FF88;box-shadow:0 0 6px #00FF88"></span>CTF Write-up · TryHackMe</div>
+        <div class="rnm"> Packed Light - TryHackMe</div>
+        <div class="rmeta">50+ rooms · Top 9% global · Bronze League #1</div>
+        <div class="rdesc">Documented techniques and tooling used across the TryHackMe Pre Security learning path — covering <strong>Linux fundamentals, networking, web hacking, and cryptography</strong>. Each room documented with approach, tooling, and key takeaways.</div>
+        <div class="rfoot">
+          <div class="stags">
+            <span class="tag">TryHackMe</span><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">Web Hacking</span>
+          </div>
+          <div class="rlinks">
+            <span class="rstatus live">Published</span>
+            <button class="rpdf-btn" onclick="openPDF('Pre Security Path — CTF Write-up','https://drive.google.com/file/d/1R1zpIW2gk8xLg2AhkIs6lI3kfiwppoco/view?usp=sharing')">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View PDF
+            </button>
+          </div>
+        </div>
+      </div>
 
-  <script src="script.js"></script>
+      <div class="rcard">
+        <div class="rtype"><span class="rdot" style="background:#00FF88;box-shadow:0 0 6px #00FF88"></span>CTF Write-up · TryHackMe</div>
+        <div class="rnm"> Complimentary - TryHackMe</div>
+        <div class="rmeta">50+ rooms · Top 9% global · Bronze League #1</div>
+        <div class="rdesc">Documented techniques and tooling used across the TryHackMe Pre Security learning path — covering <strong>Linux fundamentals, networking, web hacking, and cryptography</strong>. Each room documented with approach, tooling, and key takeaways.</div>
+        <div class="rfoot">
+          <div class="stags">
+            <span class="tag">TryHackMe</span><span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">Web Hacking</span>
+          </div>
+          <div class="rlinks">
+            <span class="rstatus live">Published</span>
+            <button class="rpdf-btn" onclick="openPDF('Pre Security Path — CTF Write-up','https://drive.google.com/file/d/1G3t0SijeSBgr9FMQ1JiSk0i95qCWjphr/view?usp=sharing')">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View PDF
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTF Report 2: replace '#' with your PDF URL -->
+      <div class="rcard">
+        <div class="rtype"><span class="rdot" style="background:#FFB800;box-shadow:0 0 6px #FFB800"></span>CTF Write-up · KPMG</div>
+        <div class="rnm">KPMG Hackathon CTF</div>
+        <div class="rmeta">Hackathon CTF · 2025 · Certificate issued</div>
+        <div class="rdesc">Write-up covering challenges solved during the KPMG Hackathon CTF 2025. Documented flag capture methodology including <strong>reconnaissance, exploitation techniques, and post-exploitation</strong> steps for each challenge category.</div>
+        <div class="rfoot">
+          <div class="stags">
+            <span class="tag">CTF</span><span class="tag">Recon</span><span class="tag">Exploitation</span><span class="tag">Web</span>
+          </div>
+          <!-- <div class="rlinks">
+            <span class="rstatus live">Published</span>
+            <button class="rpdf-btn" onclick="openPDF('KPMG Hackathon CTF — Write-up','#')">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View PDF
+            </button>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- SOC Lab Report: disabled — in progress -->
+      <div class="rcard">
+        <div class="rtype"><span class="rdot" style="background:#00E5FF;box-shadow:0 0 6px #00E5FF"></span>Lab Report · SOC / SIEM</div>
+        <div class="rnm">Home SOC Lab — Threat Detection Report</div>
+        <div class="rmeta">Wazuh · Sysmon · MITRE ATT&amp;CK mapping</div>
+        <div class="rdesc">Detailed documentation of the Home SOC Lab setup and threat investigation findings. Covers <strong>log pipeline configuration, alert triage methodology, and MITRE ATT&amp;CK technique mapping</strong> for detected events across Windows and Linux endpoints.</div>
+        <div class="rfoot">
+          <div class="stags">
+            <span class="tag">Wazuh</span><span class="tag">SIEM</span><span class="tag">MITRE ATT&amp;CK</span><span class="tag">Log Analysis</span>
+          </div>
+          <div class="rlinks">
+            <span class="rstatus pending">In Progress</span>
+            <button class="rpdf-btn" disabled title="Report coming soon">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Coming Soon
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bug Bounty Report: disabled — confidential -->
+      <div class="rcard">
+        <div class="rtype"><span class="rdot" style="background:#FF6B6B;box-shadow:0 0 6px #FF6B6B"></span>Bug Bounty · Disclosure</div>
+        <div class="rnm">Bug Bounty Findings</div>
+        <div class="rmeta">Responsible disclosure · Multiple platforms</div>
+        <div class="rdesc">Ongoing bug bounty research across public programs. Hunting for <strong>IDOR, XSS, SSRF, and authentication bypass</strong> vulnerabilities on web applications. All findings follow responsible disclosure guidelines and are reported directly to affected vendors.</div>
+        <div class="rfoot">
+          <div class="stags">
+            <span class="tag">IDOR</span><span class="tag">XSS</span><span class="tag">SSRF</span><span class="tag">Auth Bypass</span><span class="tag">Burp Suite</span>
+          </div>
+          <div class="rlinks">
+            <span class="rstatus private">Confidential</span>
+            <button class="rpdf-btn" disabled title="Private — not publicly available">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Private
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT PREVIEW GALLERY MODAL -->
+<div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Project Preview">
+  <div class="gallery-modal-header">
+    <span class="gallery-modal-title" id="galleryModalTitle">Project Preview</span>
+    <button class="gallery-modal-close" id="galleryModalClose" aria-label="Close gallery">[ close ]</button>
+  </div>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</div>
+
+<!-- LIGHTBOX (single image fullscreen) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">[ close ]</button>
+  <img id="lightboxImg" src="" alt="Screenshot preview">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<!-- PDF VIEWER MODAL -->
+<div class="pdf-modal" id="pdfModal" role="dialog" aria-modal="true" aria-label="PDF Viewer">
+  <div class="pdf-modal-header">
+    <span class="pdf-modal-title" id="pdfModalTitle">Report</span>
+    <div class="pdf-modal-actions">
+      <a href="#" id="pdfModalDl" download class="pdf-modal-dl" target="_blank" rel="noopener noreferrer">↓ Download</a>
+      <button class="pdf-modal-close" id="pdfModalClose" aria-label="Close PDF viewer">[ close ]</button>
+    </div>
+  </div>
+  <div class="pdf-modal-frame">
+    <iframe id="pdfModalFrame" title="PDF Report Viewer" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- ══════════ LEADERSHIP ══════════ -->
+<section id="leadership">
+  <div class="wrap">
+    <div class="eyebrow">Leadership</div>
+    <h2 class="sec-heading">Beyond the Terminal</h2>
+    <p class="sec-sub">Security isn't just technical — it's about communication and making complex ideas accessible.</p>
+    <div class="lead-stats reveal">
+      <div class="lstat"><div class="lstat-v">10+</div><div class="lstat-l">Technical Events</div></div>
+      <div class="lstat"><div class="lstat-v">100+</div><div class="lstat-l">Participants</div></div>
+      <!-- <div class="lstat"><div class="lstat-v">1</div><div class="lstat-l">IEEE Chapter</div></div> -->
+    </div>
+    <div class="lead-box reveal">
+      <p><strong>Event &amp; Management Head</strong> at <strong>IEEE HIT SB</strong> — led 10+ technical events with 100+ participants, overseeing end-to-end planning, coordination and execution. Demonstrated strong leadership and organisational skills across workshops, hackathons, and seminars.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact" class="surface">
+  <div class="contact-glow"></div>
+  <div class="contact-inner">
+    <!-- FIX #7: use .center modifier class, not inline style -->
+    <div class="eyebrow center">Contact</div>
+    <h2 class="ctitle">Let's Work<br><span class="ca">Together.</span></h2>
+    <p class="csub">Open to internships, freelance engagements, and full-time opportunities. Response within 24 hrs.</p>
+    <!-- FIX #15: clamp font-size + word-break -->
+    <div class="email-wrap">
+  <a href="mailto:anmolchaudhary8213@gmail.com" class="cemail">anmolchaudhary8213@gmail.com</a>
+  <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+      <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+    </svg>
+    <span id="copyBtnText">Copy</span>
+  </button>
+</div>
+    <div class="clinks">
+      <!-- FIX #18: rel="noopener noreferrer" on all external links -->
+      <a href="https://github.com/ianmol13" target="_blank" rel="noopener noreferrer" class="clnk" aria-label="GitHub profile">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="https://linkedin.com/in/ianmol13" target="_blank" rel="noopener noreferrer" class="clnk" aria-label="LinkedIn profile">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://tryhackme.com/p/whiteghost99" target="_blank" rel="noopener noreferrer" class="clnk" aria-label="TryHackMe profile">🎯 TryHackMe</a>
+      <a href="https://instagram.com/_anmolchaudhary._" target="_blank" rel="noopener noreferrer" class="clnk" aria-label="Instagram profile">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Instagram
+      </a>
+      <a href="https://facebook.com/anmol.chaudhury.7" target="_blank" rel="noopener noreferrer" class="clnk" aria-label="Facebook profile">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        Facebook
+      </a>
+      <a href="tel:+919708159436" class="clnk" aria-label="Call Anmol Kumar">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call
+      </a>
+    </div>
+    <a href="https://ianmol13.me/Anmol_Kumar_Resume_Cybersecurity.pdf" target="_blank" rel="noopener noreferrer" class="btn-p">Download Resume →</a>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="fcopy">© 2026 <span>Anmol Kumar</span> · Built with intent.</div>
+  <div class="fstatus">
+    <div class="fstatus-dot"></div>
+    Open to Opportunities
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
 </body>
 </html>
