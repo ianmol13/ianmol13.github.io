@@ -99,7 +99,7 @@ const galleryData = {
     { src:'#', caption:'Encrypted vault file output' }
   ],
   subdomain: [
-    { src:'Subdomain2.png', caption:'Terminal scan output — 312 subdomains found' },
+    { src:'Subdomain2.png', caption:'UI' },
     { src:'Subdomain(1).png', caption:'CSV export — structured results file' },
     { src:'Subdomain (2).png', caption:'Multi-threaded scan speed benchmark' }
   ],
